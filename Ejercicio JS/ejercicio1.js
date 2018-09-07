@@ -8,7 +8,7 @@ function a_texto(nueva_edad){
 }
 
 function ejercicio(){
-	var edad = Number(prompt("Ingrese su edad: "));
+	var edad = Number(prompt("Ingrese su edad: ");
 	//var años = (edad) => edad*365;
 	var nueva_edad = años(edad);
 	if (nueva_edad % 2 == 0){
