@@ -23,14 +23,15 @@ function buildPaella(){
 	else if (this.typeCoin.value === "euro")
 		var total = newCalculateEuro(this.paellaPrice.value);
 	console.log("Precio", this.typeCoin.value, ": ", total);
-	//hacer un ciclo for
-	for (var i = 0; i < array.length; i++){
+	/*for (var i = 0; i < array.length; i++){
 		var factory2 = executeFactory(array[i]);
 		var paellaProduct2 = generatePaella(factory2.type);
 		var car = new buildShoppingCar(factory2.type, paellaProduct2);
 		console.log(car);
 	}
-	console.log(fin);
+	console.log(fin);*/
+	var decorator = new executeDcorator(menuItems)
+	console.log(decorator)
 }
 
 function getValuePrice(paellaPrice){
