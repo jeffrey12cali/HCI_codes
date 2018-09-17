@@ -13,6 +13,8 @@
 	<script type="text/javascript" src="src/composite_incorrecto.js"></script>
 	<script type="text/javascript" src="src/Decorator.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="paella.css">
+
 	<title>Restaurante Javeriana</title>
 	
 </head>
@@ -22,15 +24,19 @@
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				<h1 style="text-align: center; margin-top: 50px;">Restaurante Javeriana</h1>
-				<h3 style="text-align: center;"">Menú especial</h3>
+				<h3 style="text-align: center;">Menú especial</h3>
 				<form>
 					<div class="form-group">
 						<label for="selectControl">Paella</label>
-						<select multiple class="form-control" id="paellaType" onchange="getValueType(this)">
-					      <option value="Mariscos">Mariscos</option>
-					      <option value="Vegetariana">Vegetariana</option>
-					      <option value="CarnePollo">Carne y pollo</option>
-					    </select>
+						<div id="contentBox">
+							<div class="column">
+								<select dir="rt1" multiple class="form-control" id="paellaType" onchange="getValueType(this)">
+							      <option value="Mariscos">Mariscos</option>
+							      <option value="Vegetariana">Vegetariana</option>
+							      <option value="CarnePollo">Carne y pollo</option>
+							    </select>
+							</div>
+						</div>
 					</div>
 					<div class="form-group">
 						<label>Seleccione el tipo de moneda</label>
