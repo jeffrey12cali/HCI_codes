@@ -1,0 +1,81 @@
+body{
+	background-color: #ccf7cc;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.div-right{
+	margin-top: 10px !important;
+}
+
+.crop{
+	float:left;
+	overflow:hidden; /* IMPORTANTE */
+}
+
+.crop .image-profile{
+	height: 300px;
+	width: 90%;
+	border-radius: 10%;
+	margin-left: 20%;
+	margin-top: 10%;
+}
+
+.div-right{
+	overflow: hidden;
+	padding: 30px;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+.titles{
+	color: #333333;
+	font-family: 'Raleway',sans-serif;
+	font-size: 62px;
+	font-weight: 800;
+	line-height: 72px;
+	margin: 0 0 24px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.subtitle{
+	color: #333333;
+	font-family: 'Raleway',sans-serif;
+	font-size: 30px;
+	font-weight: 800;
+	line-height: 36px;
+	margin: 0 0 24px;
+	text-align: center; 
+}
+
+table {
+	margin-top: 5%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+td, th {
+    border: 1px solid #90EE90;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #90EE90;
+    font-weight: bold;
+}
+
+.div-right a{
+	font-size: 1.5em;
+}
+
+.title-photo{
+	text-align: center; 
+	margin-bottom: 10%;
+}
+
+.center{
+	margin-top: 10%;
+    margin-left: 10%;
+}
