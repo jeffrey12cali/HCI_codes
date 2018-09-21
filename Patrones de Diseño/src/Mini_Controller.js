@@ -11,7 +11,6 @@ function getValueType (paellaType){
 }
 
 function buildPaella(){
-	getValueInput();
 	var factory = executeFactory(this.paellaType.value);
 	var paellaProduct = generatePaella(factory.type);
 	console.log(paellaProduct);

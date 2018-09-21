@@ -42,7 +42,7 @@
 			<div class="col-md-3">
 				<form>
 					<div class="form-group">
-						<select dir="rt1" multiple class="form-control" id="paellaType" onchange="getValueType(this)">
+						<select dir="rt1" multiple class="form-control" id="paellaType" onchange="selSelect(this)">
 					      <option value="Mariscos"> Mariscos</option>
 					      <option value="Vegetariana"> Vegetariana</option>
 					      <option value="CarnePollo"> Carne y pollo</option>
@@ -52,7 +52,7 @@
 			</div>
 			<div class="col-md-2">
 				<form>
-					  <input type="checkbox" id="paellaType" value="Mariscos" onclick="getValueCheck(this)"> Mariscos<br>
+					  <input type="checkbox" id="paellaType" value="Mariscos" onclick="checkboxSelect(this)"> Mariscos<br>
 					  <input type="checkbox" id="paellaType" value="Vegetariana" onclick="checkboxSelect(this)"> Vegetariana<br>
   					  <input type="checkbox" id="paellaType" value="CarnePollo" onclick="checkboxSelect(this)"> Carne y pollo<br>
 				</form>
@@ -117,7 +117,7 @@
 		</div>
 		<form>
 			<div class="form-group col-md-12 text-center"> 
-				<button type="button" class="btn btn-success" onclick="buildPaella()">Realizar Pedido</button>
+				<button type="button" class="btn btn-success" onclick="implementor()">Realizar Pedido</button>
 			</div>
 		</form>
 	</div>	
