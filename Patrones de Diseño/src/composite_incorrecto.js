@@ -1,25 +1,16 @@
 function shoppingCar(typePaella){ 
     this.typePaella = typePaella;
     var arrayElements = [];
+}
 
-    this.compositeProto = function(){
-        var objectoComposite = {
-            add: function(product){
-                arrayElements.push(product);
-                return arrayElements;
-            },
-
-            remove: function (arrayElements){
-
-                arrayElements.split(0, arrayElements.length);
-                arrayElements.add(product);
-                return arrayElements;
-            }
-        }
-
-        return objectoComposite;
+shoppingCar.prototype = {
+    add: function(products){
+        this.arrayElements.push(products);
+    },
+    remove: function(products){
+        this.arrayElements.splice(0, this.arrayElements.length);
+        this.arrayElements.push(products);
     }
-
 }
 
 /*function shoppingCar(typePaella){ 
@@ -44,7 +35,7 @@ function shoppingCar(typePaella){
 }*/
 
 
-function buildShoppingCar(productType, product){//tipo de producto, producto){
+function buildShoppingCar(type, product){//tipo de producto, producto){
     /*this.product = product
     var car = new shoppingCar(productType);
     console.log(car);
@@ -52,15 +43,16 @@ function buildShoppingCar(productType, product){//tipo de producto, producto){
     car.compositeProto().add(productType);
     productType.add(product);*/
 
-    var car = new shoppingCar(productType);
+    var arrayC = [];
     //var resultCar = car.compositeProto().add(product);
 
-    var resultCar;
+    var car = new shoppingCar(type);
 
-    for (var i = product.lenth - 1; i >= 0; i++){
-        resultCar = car.compositeProto().add(product);
+    for (var i = 0; i < prodcut.lenght; i++){
+        car.add(product[i])
+        arrayC.push(car);
     }
 
-    return resultCar;
+    return arrayC;
 }
 

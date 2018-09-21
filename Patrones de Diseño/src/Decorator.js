@@ -6,13 +6,12 @@ function decoratorNameProduct(product,descripcion){
 	this.product = product;
 	this.descripcion = descripcion;
 	var allName = this.product.name + " " + descripcion;
+	console.log(allName)
+	return allName;
 }
 
 function executeDecorator(item){
-	for(var i = 0; i < item.length; i++){
-		var productName = productPaella(type);
-		var decorated = new decorateNameProduct(productName, "La mejor paella de la universidad");
-		itemDecorate.push(decorated);
-	}
-	return itemDecorate;
+	var productName = new productPaella(item);
+	var decorated = new decoratorNameProduct(productName, "La mejor paella de la universidad");
+	return decorated;
 }

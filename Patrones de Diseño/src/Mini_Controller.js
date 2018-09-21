@@ -1,16 +1,17 @@
-var array = [];
-
-var fin = [];
+var menuItems = ["Mariscos","Vegetariana","Carne y Pollo"];
+var arrPaellas = []
 
 /*Esta funcion permite obtener el valor del select de html(onchange)*/
 function getValueType (paellaType){
 
 	this.paellaType = paellaType;
-	array.push(this.paellaType.value);
-	console.log(array);
+	if(!arrPaellas.includes(this.paellaType.value))
+		arrPaellas.push(this.paellaType.value);
+	console.log("Productos en el carrito: " + arrPaellas);
 }
 
 function buildPaella(){
+	getValueInput();
 	var factory = executeFactory(this.paellaType.value);
 	var paellaProduct = generatePaella(factory.type);
 	console.log(paellaProduct);
@@ -30,8 +31,17 @@ function buildPaella(){
 		console.log(car);
 	}
 	console.log(fin);*/
-	var decorator = new executeDcorator(menuItems)
-	console.log(decorator)
+	var decoratedItems = [];
+	/*for(var i = 0; i < arrPaellas.length; i++){
+		var decorator = new executeDecorator(arrPaellas[i])
+		decoratedItems.push(decorator);
+	}*/
+	var bridge = implementor();
+	for(var i = 0; i < bridge.length; i++){
+		var decorator = new executeDecorator(bridge[i])
+		decoratedItems.push(decorator);
+	}
+	console.log(decoratedItems[0]);
 }
 
 function getValuePrice(paellaPrice){
