@@ -1,7 +1,7 @@
 <?php
   function hex_ver($num){
     if ($num >=0 and $num <= 9){
-      return $num;
+      return (string)$num;
     }
     else{
       if ($num == 10)
@@ -18,19 +18,23 @@
         return 'F';
     }
   }
-  function rgb_to_hex($dec){
-  $dec = int($dec);
-    $prev = 0;
+  function dec_to_hex($dec){
+  	$dec = (int)$dec;
+    $prev = '';
+    if ($dec == 0)
+    	return '0';
     while ($dec > 0){
       $mod = $dec % 16;
       $mod = hex_ver($mod);
-      $prev += $mod;
-      $dec = int($dec/16);
+      if ($mod != '0')
+      	$prev = $prev.$mod;
+      $dec = (int)$dec/16;
     }
-    print($prev);
-  return $prev;
+    return strrev($prev);
   }
-  $var = int(66)
-
-  rgb_to_hex($var);
+  function rgb_to_hex($var1,$var2,$var3){
+  	print(dec_to_hex($var1).dec_to_hex($var2).dec_to_hex($var3));
+  }
+  rgb_to_hex(244,66,66);
+  //dec_to_hex(244);
 ?>
