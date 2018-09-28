@@ -9,8 +9,7 @@
 		$observerClass->getUser($mysqli,$obj);
 	}
 
-	if (isset($_POST)){
-		echo "in1";
+	if (isset($_POST['identification'], $_POST['first_name'], $_POST['city'])){
 		$obj = (object)$_POST;
 		$observerClass -> insertUser($mysqli, $obj);
 	}
@@ -34,10 +33,8 @@
 		}
 
 		function insertUser($mysqli, $obj){
-			echo "in";
-			if(isset($_POST)){
-				$sql = $mysqli -> query("INSERT INTO usuario (id_usuario,nombre,apellido,edad,cod_ciudad) VALUES (".$obj->identification.", '".$obj->first_name."', '".$obj->last_name."', ".$obj->age.", '".$obj->city."')");
-			}
+			$sql = $mysqli -> query("INSERT INTO usuario (id_usuario,nombre,apellido,edad,cod_ciudad) VALUES (".$obj->identification.", '".$obj->first_name."', '".$obj->last_name."', ".$obj->age.", '".$obj->city."')");
+			echo "Hola <b>".$obj->first_name."</b> te acabas de registrar";
 		}
 
 		function suscribeUser($mysqli, $obj){}

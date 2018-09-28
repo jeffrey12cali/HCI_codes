@@ -12,7 +12,7 @@ function searchTupla(){
 }
 
 function insertUser(){
-	var identificacion = document.getElementById('identification').value;
+	var identification = document.getElementById('identification').value;
 	var first_name = document.getElementById('first_name').value;
 	var last_name = document.getElementById('last_name').value;
 	var age = document.getElementById('age').value;
@@ -25,7 +25,6 @@ function insertUser(){
 		'age': age,
 		'city': city
 	};
-	print("in");
 	$.ajax({
 		type:'POST',
 		url:'backend_revista.php',
