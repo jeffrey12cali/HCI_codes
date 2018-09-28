@@ -1,9 +1,17 @@
 function searchTupla(){
 	var search = document.getElementById('search').value;
-	var dataEn = 'serach='+search;
+	var dataEn = 'search='+search;
+	$.ajax({
+		type:'GET',
+		url:'backend_revista.php',
+		data:dataEn,
+		success:function(resp){
+			$('#res').html(resp)
+		}
+	});
 }
 
-funtion insertUser(){
+function insertUser(){
 	var identificacion = document.getElementById('identification').value;
 	var first_name = document.getElementById('first_name').value;
 	var last_name = document.getElementById('last_name').value;
@@ -12,20 +20,21 @@ funtion insertUser(){
 
 	var dataEn = {
 		'identification': identification,
-		'frist_name': first_name,
+		'first_name': first_name,
 		'last_name': last_name,
 		'age': age,
 		'city': city
 	};
-
+	print("in");
 	$.ajax({
 		type:'POST',
-		url:'src/backend_revista.php',
+		url:'backend_revista.php',
 		data:dataEn,
 		success:function(resp){
 			$('#res').html(resp)
 		}
 	});
 }
+
 function suscribeUser(){
 }

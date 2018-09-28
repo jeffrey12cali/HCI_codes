@@ -73,6 +73,6 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="subject.js"></script>
+	<script type="text/javascript" src="subject_base.js"></script>
 </body>
 </html>
